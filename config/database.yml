@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  reconnect: true
+
+development:
+  <<: *default
+  host: localhost
+  database: quote_editor_development
+  port: 5440
+  username: postgres
+  password: postgres
+
+test:
+  <<: *default
+  url: <%= ENV['POSTGRESQL_TRANSACTIONS_URL'] %>
