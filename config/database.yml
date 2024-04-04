@@ -9,7 +9,7 @@ development:
   <<: *default
   host: localhost
   database: quote_editor_development
-  port: 5440
+  port: 5441
   username: postgres
   password: postgres
 
