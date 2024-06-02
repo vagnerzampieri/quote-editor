@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Description: This file contains the QuotesController.
+# Controller for Quotes
 class QuotesController < ApplicationController
   before_action :set_quote, only: %i[show edit update destroy]
 
